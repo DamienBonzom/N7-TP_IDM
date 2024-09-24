@@ -88,7 +88,7 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 	 * vers les classes parentes, le cas échéant)
 	 */
 	//TODO: faire ce cas : lancer suivant la classe du process element le test sur la workdefinition ou la worksequence
-	//Puis tester le main dans ValidateSimplePDL ( mettre models/SimplePDLCreator_Created_Process.xmi en argument au cas où)
+	//Puis tester le main dans ValidateSimplePDL ( mettre models/SimplePDLCreator_Created_Process.xmi en argument au cas où test setup github!)
 	@Override
 	public Boolean caseProcessElement(ProcessElement object) {
 		//if(object.getClass() == WorkDefinition)
