@@ -8,6 +8,8 @@ import simplepdl.ProcessElement;
 import simplepdl.SimplepdlPackage;
 import simplepdl.WorkDefinition;
 import simplepdl.WorkSequence;
+import simplepdl.impl.WorkDefinitionImpl;
+import simplepdl.impl.WorkSequenceImpl;
 import simplepdl.util.SimplepdlSwitch;
 
 /**
@@ -87,11 +89,8 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
 	 * vers les classes parentes, le cas échéant)
 	 */
-	//TODO: faire ce cas : lancer suivant la classe du process element le test sur la workdefinition ou la worksequence
-	//Puis tester le main dans ValidateSimplePDL ( mettre models/SimplePDLCreator_Created_Process.xmi en argument au cas où test setup github!)
 	@Override
 	public Boolean caseProcessElement(ProcessElement object) {
-		//if(object.getClass() == WorkDefinition)
 		return null;
 	}
 
@@ -135,7 +134,7 @@ public class SimplePDLValidator extends SimplepdlSwitch<Boolean> {
 				"La dépendance relie l'activité " + object.getPredecessor().getName() + " à elle-même");
 		
 		this.result.recordIfFailed(
-				object.getSuccessor().getLinksToPredecessors().stream().allMatch(ws -> ws.getLinkType() != object.getLinkType()), 
+				object.getSuccessor().getLinksToPredecessors().stream().filter(ws -> ws.getLinkType() == object.getLinkType()).count() <= 1, 
 				object, 
 				"Cette dépendance n'est pas unique.");
 		

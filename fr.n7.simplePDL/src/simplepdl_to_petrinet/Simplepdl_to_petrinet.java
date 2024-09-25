@@ -1,5 +1,7 @@
 package simplepdl_to_petrinet;
 
+import java.io.IOException;
+import java.util.Collections;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
@@ -8,15 +10,27 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import petrinet.Liens;
 import petrinet.Petri;
 import petrinet.PetrinetFactory;
 import petrinet.PetrinetPackage;
+import petrinet.Places;
+import petrinet.Transitions;
 import petrinet.impl.PetrinetPackageImpl;
 import simplepdl.Process;
 import simplepdl.SimplepdlFactory;
 import simplepdl.SimplepdlPackage;
+import simplepdl.impl.WorkDefinitionImpl;
 
 public class Simplepdl_to_petrinet {
+	
+	Petri petrinet;
+	PetrinetFactory myFactory_petrinet;
+	
+	
+	private void init_places(WorkDefinitionImpl w) {
+		Places p_init = myFactory_petrinet.createPlaces();
+	}
 
 	public static void main(String[] args) {
 		// Chargement du package SimplePDL afin de l'enregistrer dans le registre d'Eclipse.
@@ -52,7 +66,7 @@ public class Simplepdl_to_petrinet {
 		ResourceSet resSet_petrinet = new ResourceSetImpl();
 
 		// DÃ©finir la ressource (le modÃ¨le)
-		URI modelURI_petrinet = URI.createURI("/models/transformation_reseau_petri.xmi");
+		URI modelURI_petrinet = URI.createURI("models/transformation_reseau_petri.xmi");
 		Resource resource_petrinet = resSet_petrinet.createResource(modelURI_petrinet);
 				
 		// La fabrique pour fabriquer les Ã©lÃ©ments de SimplePDL
@@ -64,6 +78,34 @@ public class Simplepdl_to_petrinet {
 				
 		// Ajouter le Process dans le modÃ¨le
 		resource_petrinet.getContents().add(petrinet);
+		
+		Places p1 = myFactory_petrinet.createPlaces();
+		p1.setNbr_jetons(1);
+		Places p2 = myFactory_petrinet.createPlaces();
+		p2.setNbr_jetons(0);
+		Transitions t1 = myFactory_petrinet.createTransitions();
+		Liens l1 = myFactory_petrinet.createLiens();
+		l1.setPredecesseur(p1);
+		l1.setSuccesseur(t1);
+		Liens l2 = myFactory_petrinet.createLiens();
+		l2.setPredecesseur(t1);
+		l2.setSuccesseur(p2);
+		petrinet.getElements().add(l2);
+		petrinet.getElements().add(l1);
+		petrinet.getElements().add(p1);
+		petrinet.getElements().add(p2);
+		petrinet.getElements().add(t1);
+		
+		// Sauver la ressource
+	    try {
+	    	resource_petrinet.save(Collections.EMPTY_MAP);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
 
 	}
 
