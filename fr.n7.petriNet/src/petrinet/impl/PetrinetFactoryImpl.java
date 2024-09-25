@@ -61,7 +61,7 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 			case PetrinetPackage.PLACES: return createPlaces();
 			case PetrinetPackage.TRANSITIONS: return createTransitions();
 			case PetrinetPackage.LIENS: return createLiens();
-			case PetrinetPackage.ZONE: return createzone();
+			case PetrinetPackage.ZONE: return createZone();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -128,8 +128,8 @@ public class PetrinetFactoryImpl extends EFactoryImpl implements PetrinetFactory
 	 * @generated
 	 */
 	@Override
-	public zone createzone() {
-		zoneImpl zone = new zoneImpl();
+	public Zone createZone() {
+		ZoneImpl zone = new ZoneImpl();
 		return zone;
 	}
 

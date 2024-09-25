@@ -67,13 +67,13 @@ public interface PetrinetFactory extends EFactory {
 	Liens createLiens();
 
 	/**
-	 * Returns a new object of class '<em>zone</em>'.
+	 * Returns a new object of class '<em>Zone</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>zone</em>'.
+	 * @return a new object of class '<em>Zone</em>'.
 	 * @generated
 	 */
-	zone createzone();
+	Zone createZone();
 
 	/**
 	 * Returns the package supported by this factory.

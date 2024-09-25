@@ -16,7 +16,7 @@ import petrinet.PetrinetFactory;
 import petrinet.PetrinetPackage;
 import petrinet.Places;
 import petrinet.Transitions;
-import petrinet.zone;
+import petrinet.Zone;
 
 /**
  * <!-- begin-user-doc -->
@@ -263,7 +263,7 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getzone() {
+	public EClass getZone() {
 		return zoneEClass;
 	}
 
@@ -273,7 +273,7 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getzone_Predecesseurs() {
+	public EReference getZone_Predecesseurs() {
 		return (EReference)zoneEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -283,8 +283,18 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getzone_Successeurs() {
+	public EReference getZone_Successeurs() {
 		return (EReference)zoneEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getZone_Nom_zone() {
+		return (EAttribute)zoneEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -337,6 +347,7 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		zoneEClass = createEClass(ZONE);
 		createEReference(zoneEClass, ZONE__PREDECESSEURS);
 		createEReference(zoneEClass, ZONE__SUCCESSEURS);
+		createEAttribute(zoneEClass, ZONE__NOM_ZONE);
 	}
 
 	/**
@@ -367,8 +378,8 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		placesEClass.getESuperTypes().add(this.getzone());
-		transitionsEClass.getESuperTypes().add(this.getzone());
+		placesEClass.getESuperTypes().add(this.getZone());
+		transitionsEClass.getESuperTypes().add(this.getZone());
 		liensEClass.getESuperTypes().add(this.getPetriElement());
 		zoneEClass.getESuperTypes().add(this.getPetriElement());
 
@@ -387,13 +398,14 @@ public class PetrinetPackageImpl extends EPackageImpl implements PetrinetPackage
 		initEAttribute(getTransitions_Est_possible(), ecorePackage.getEBoolean(), "est_possible", null, 1, 1, Transitions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(liensEClass, Liens.class, "Liens", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLiens_Predecesseur(), this.getzone(), null, "predecesseur", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLiens_Successeur(), this.getzone(), null, "successeur", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLiens_Predecesseur(), this.getZone(), null, "predecesseur", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLiens_Successeur(), this.getZone(), null, "successeur", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLiens_Is_read_arc(), ecorePackage.getEBoolean(), "is_read_arc", null, 1, 1, Liens.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(zoneEClass, zone.class, "zone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getzone_Predecesseurs(), this.getLiens(), null, "predecesseurs", null, 0, -1, zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getzone_Successeurs(), this.getLiens(), null, "successeurs", null, 0, -1, zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(zoneEClass, Zone.class, "Zone", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getZone_Predecesseurs(), this.getLiens(), null, "predecesseurs", null, 0, -1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getZone_Successeurs(), this.getLiens(), null, "successeurs", null, 0, -1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getZone_Nom_zone(), ecorePackage.getEString(), "nom_zone", null, 1, 1, Zone.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

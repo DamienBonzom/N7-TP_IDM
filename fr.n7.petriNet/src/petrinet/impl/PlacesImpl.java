@@ -22,7 +22,7 @@ import petrinet.Places;
  *
  * @generated
  */
-public class PlacesImpl extends zoneImpl implements Places {
+public class PlacesImpl extends ZoneImpl implements Places {
 	/**
 	 * The default value of the '{@link #getNbr_jetons() <em>Nbr jetons</em>}' attribute.
 	 * <!-- begin-user-doc -->

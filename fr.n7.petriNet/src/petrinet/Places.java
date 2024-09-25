@@ -18,7 +18,7 @@ package petrinet;
  * @model
  * @generated
  */
-public interface Places extends zone {
+public interface Places extends Zone {
 	/**
 	 * Returns the value of the '<em><b>Nbr jetons</b></em>' attribute.
 	 * <!-- begin-user-doc -->

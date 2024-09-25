@@ -27,12 +27,12 @@ public interface Liens extends PetriElement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Predecesseur</em>' reference.
-	 * @see #setPredecesseur(zone)
+	 * @see #setPredecesseur(Zone)
 	 * @see petrinet.PetrinetPackage#getLiens_Predecesseur()
 	 * @model required="true"
 	 * @generated
 	 */
-	zone getPredecesseur();
+	Zone getPredecesseur();
 
 	/**
 	 * Sets the value of the '{@link petrinet.Liens#getPredecesseur <em>Predecesseur</em>}' reference.
@@ -42,19 +42,19 @@ public interface Liens extends PetriElement {
 	 * @see #getPredecesseur()
 	 * @generated
 	 */
-	void setPredecesseur(zone value);
+	void setPredecesseur(Zone value);
 
 	/**
 	 * Returns the value of the '<em><b>Successeur</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Successeur</em>' reference.
-	 * @see #setSuccesseur(zone)
+	 * @see #setSuccesseur(Zone)
 	 * @see petrinet.PetrinetPackage#getLiens_Successeur()
 	 * @model required="true"
 	 * @generated
 	 */
-	zone getSuccesseur();
+	Zone getSuccesseur();
 
 	/**
 	 * Sets the value of the '{@link petrinet.Liens#getSuccesseur <em>Successeur</em>}' reference.
@@ -64,7 +64,7 @@ public interface Liens extends PetriElement {
 	 * @see #getSuccesseur()
 	 * @generated
 	 */
-	void setSuccesseur(zone value);
+	void setSuccesseur(Zone value);
 
 	/**
 	 * Returns the value of the '<em><b>Is read arc</b></em>' attribute.

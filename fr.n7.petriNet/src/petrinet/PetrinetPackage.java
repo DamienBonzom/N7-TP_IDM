@@ -140,11 +140,11 @@ public interface PetrinetPackage extends EPackage {
 	int PETRI_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link petrinet.impl.zoneImpl <em>zone</em>}' class.
+	 * The meta object id for the '{@link petrinet.impl.ZoneImpl <em>Zone</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see petrinet.impl.zoneImpl
-	 * @see petrinet.impl.PetrinetPackageImpl#getzone()
+	 * @see petrinet.impl.ZoneImpl
+	 * @see petrinet.impl.PetrinetPackageImpl#getZone()
 	 * @generated
 	 */
 	int ZONE = 5;
@@ -177,16 +177,25 @@ public interface PetrinetPackage extends EPackage {
 	int ZONE__SUCCESSEURS = PETRI_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>zone</em>' class.
+	 * The feature id for the '<em><b>Nom zone</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE_FEATURE_COUNT = PETRI_ELEMENT_FEATURE_COUNT + 2;
+	int ZONE__NOM_ZONE = PETRI_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>zone</em>' class.
+	 * The number of structural features of the '<em>Zone</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZONE_FEATURE_COUNT = PETRI_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Zone</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -230,6 +239,15 @@ public interface PetrinetPackage extends EPackage {
 	 * @ordered
 	 */
 	int PLACES__SUCCESSEURS = ZONE__SUCCESSEURS;
+
+	/**
+	 * The feature id for the '<em><b>Nom zone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACES__NOM_ZONE = ZONE__NOM_ZONE;
 
 	/**
 	 * The feature id for the '<em><b>Nbr jetons</b></em>' attribute.
@@ -294,6 +312,15 @@ public interface PetrinetPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSITIONS__SUCCESSEURS = ZONE__SUCCESSEURS;
+
+	/**
+	 * The feature id for the '<em><b>Nom zone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITIONS__NOM_ZONE = ZONE__NOM_ZONE;
 
 	/**
 	 * The feature id for the '<em><b>Est possible</b></em>' attribute.
@@ -526,36 +553,47 @@ public interface PetrinetPackage extends EPackage {
 	EAttribute getLiens_Is_read_arc();
 
 	/**
-	 * Returns the meta object for class '{@link petrinet.zone <em>zone</em>}'.
+	 * Returns the meta object for class '{@link petrinet.Zone <em>Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>zone</em>'.
-	 * @see petrinet.zone
+	 * @return the meta object for class '<em>Zone</em>'.
+	 * @see petrinet.Zone
 	 * @generated
 	 */
-	EClass getzone();
+	EClass getZone();
 
 	/**
-	 * Returns the meta object for the reference list '{@link petrinet.zone#getPredecesseurs <em>Predecesseurs</em>}'.
+	 * Returns the meta object for the reference list '{@link petrinet.Zone#getPredecesseurs <em>Predecesseurs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Predecesseurs</em>'.
-	 * @see petrinet.zone#getPredecesseurs()
-	 * @see #getzone()
+	 * @see petrinet.Zone#getPredecesseurs()
+	 * @see #getZone()
 	 * @generated
 	 */
-	EReference getzone_Predecesseurs();
+	EReference getZone_Predecesseurs();
 
 	/**
-	 * Returns the meta object for the reference list '{@link petrinet.zone#getSuccesseurs <em>Successeurs</em>}'.
+	 * Returns the meta object for the reference list '{@link petrinet.Zone#getSuccesseurs <em>Successeurs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Successeurs</em>'.
-	 * @see petrinet.zone#getSuccesseurs()
-	 * @see #getzone()
+	 * @see petrinet.Zone#getSuccesseurs()
+	 * @see #getZone()
 	 * @generated
 	 */
-	EReference getzone_Successeurs();
+	EReference getZone_Successeurs();
+
+	/**
+	 * Returns the meta object for the attribute '{@link petrinet.Zone#getNom_zone <em>Nom zone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nom zone</em>'.
+	 * @see petrinet.Zone#getNom_zone()
+	 * @see #getZone()
+	 * @generated
+	 */
+	EAttribute getZone_Nom_zone();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -695,14 +733,14 @@ public interface PetrinetPackage extends EPackage {
 		EAttribute LIENS__IS_READ_ARC = eINSTANCE.getLiens_Is_read_arc();
 
 		/**
-		 * The meta object literal for the '{@link petrinet.impl.zoneImpl <em>zone</em>}' class.
+		 * The meta object literal for the '{@link petrinet.impl.ZoneImpl <em>Zone</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see petrinet.impl.zoneImpl
-		 * @see petrinet.impl.PetrinetPackageImpl#getzone()
+		 * @see petrinet.impl.ZoneImpl
+		 * @see petrinet.impl.PetrinetPackageImpl#getZone()
 		 * @generated
 		 */
-		EClass ZONE = eINSTANCE.getzone();
+		EClass ZONE = eINSTANCE.getZone();
 
 		/**
 		 * The meta object literal for the '<em><b>Predecesseurs</b></em>' reference list feature.
@@ -710,7 +748,7 @@ public interface PetrinetPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ZONE__PREDECESSEURS = eINSTANCE.getzone_Predecesseurs();
+		EReference ZONE__PREDECESSEURS = eINSTANCE.getZone_Predecesseurs();
 
 		/**
 		 * The meta object literal for the '<em><b>Successeurs</b></em>' reference list feature.
@@ -718,7 +756,15 @@ public interface PetrinetPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ZONE__SUCCESSEURS = eINSTANCE.getzone_Successeurs();
+		EReference ZONE__SUCCESSEURS = eINSTANCE.getZone_Successeurs();
+
+		/**
+		 * The meta object literal for the '<em><b>Nom zone</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ZONE__NOM_ZONE = eINSTANCE.getZone_Nom_zone();
 
 	}
 

@@ -24,9 +24,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PetriNet.ecore#//Liens/successeur"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PetriNet.ecore#//Liens/is_read_arc"/>
     </genClasses>
-    <genClasses ecoreClass="PetriNet.ecore#//zone">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PetriNet.ecore#//zone/predecesseurs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PetriNet.ecore#//zone/successeurs"/>
+    <genClasses ecoreClass="PetriNet.ecore#//Zone">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PetriNet.ecore#//Zone/predecesseurs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference PetriNet.ecore#//Zone/successeurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PetriNet.ecore#//Zone/nom_zone"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

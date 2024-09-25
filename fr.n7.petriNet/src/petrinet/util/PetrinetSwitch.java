@@ -81,7 +81,7 @@ public class PetrinetSwitch<T> extends Switch<T> {
 			case PetrinetPackage.PLACES: {
 				Places places = (Places)theEObject;
 				T result = casePlaces(places);
-				if (result == null) result = casezone(places);
+				if (result == null) result = caseZone(places);
 				if (result == null) result = casePetriElement(places);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -89,7 +89,7 @@ public class PetrinetSwitch<T> extends Switch<T> {
 			case PetrinetPackage.TRANSITIONS: {
 				Transitions transitions = (Transitions)theEObject;
 				T result = caseTransitions(transitions);
-				if (result == null) result = casezone(transitions);
+				if (result == null) result = caseZone(transitions);
 				if (result == null) result = casePetriElement(transitions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -102,8 +102,8 @@ public class PetrinetSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case PetrinetPackage.ZONE: {
-				zone zone = (zone)theEObject;
-				T result = casezone(zone);
+				Zone zone = (Zone)theEObject;
+				T result = caseZone(zone);
 				if (result == null) result = casePetriElement(zone);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -188,17 +188,17 @@ public class PetrinetSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>zone</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Zone</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>zone</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Zone</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casezone(zone object) {
+	public T caseZone(Zone object) {
 		return null;
 	}
 

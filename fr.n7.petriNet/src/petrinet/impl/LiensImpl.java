@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import petrinet.Liens;
 import petrinet.PetrinetPackage;
-import petrinet.zone;
+import petrinet.Zone;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +37,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * @generated
 	 * @ordered
 	 */
-	protected zone predecesseur;
+	protected Zone predecesseur;
 
 	/**
 	 * The cached value of the '{@link #getSuccesseur() <em>Successeur</em>}' reference.
@@ -47,7 +47,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * @generated
 	 * @ordered
 	 */
-	protected zone successeur;
+	protected Zone successeur;
 
 	/**
 	 * The default value of the '{@link #isIs_read_arc() <em>Is read arc</em>}' attribute.
@@ -94,10 +94,10 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * @generated
 	 */
 	@Override
-	public zone getPredecesseur() {
+	public Zone getPredecesseur() {
 		if (predecesseur != null && predecesseur.eIsProxy()) {
 			InternalEObject oldPredecesseur = (InternalEObject)predecesseur;
-			predecesseur = (zone)eResolveProxy(oldPredecesseur);
+			predecesseur = (Zone)eResolveProxy(oldPredecesseur);
 			if (predecesseur != oldPredecesseur) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.LIENS__PREDECESSEUR, oldPredecesseur, predecesseur));
@@ -111,7 +111,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public zone basicGetPredecesseur() {
+	public Zone basicGetPredecesseur() {
 		return predecesseur;
 	}
 
@@ -121,8 +121,8 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * @generated
 	 */
 	@Override
-	public void setPredecesseur(zone newPredecesseur) {
-		zone oldPredecesseur = predecesseur;
+	public void setPredecesseur(Zone newPredecesseur) {
+		Zone oldPredecesseur = predecesseur;
 		predecesseur = newPredecesseur;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIENS__PREDECESSEUR, oldPredecesseur, predecesseur));
@@ -134,10 +134,10 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * @generated
 	 */
 	@Override
-	public zone getSuccesseur() {
+	public Zone getSuccesseur() {
 		if (successeur != null && successeur.eIsProxy()) {
 			InternalEObject oldSuccesseur = (InternalEObject)successeur;
-			successeur = (zone)eResolveProxy(oldSuccesseur);
+			successeur = (Zone)eResolveProxy(oldSuccesseur);
 			if (successeur != oldSuccesseur) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetPackage.LIENS__SUCCESSEUR, oldSuccesseur, successeur));
@@ -151,7 +151,7 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public zone basicGetSuccesseur() {
+	public Zone basicGetSuccesseur() {
 		return successeur;
 	}
 
@@ -161,8 +161,8 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	 * @generated
 	 */
 	@Override
-	public void setSuccesseur(zone newSuccesseur) {
-		zone oldSuccesseur = successeur;
+	public void setSuccesseur(Zone newSuccesseur) {
+		Zone oldSuccesseur = successeur;
 		successeur = newSuccesseur;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetPackage.LIENS__SUCCESSEUR, oldSuccesseur, successeur));
@@ -220,10 +220,10 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PetrinetPackage.LIENS__PREDECESSEUR:
-				setPredecesseur((zone)newValue);
+				setPredecesseur((Zone)newValue);
 				return;
 			case PetrinetPackage.LIENS__SUCCESSEUR:
-				setSuccesseur((zone)newValue);
+				setSuccesseur((Zone)newValue);
 				return;
 			case PetrinetPackage.LIENS__IS_READ_ARC:
 				setIs_read_arc((Boolean)newValue);
@@ -241,10 +241,10 @@ public class LiensImpl extends PetriElementImpl implements Liens {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PetrinetPackage.LIENS__PREDECESSEUR:
-				setPredecesseur((zone)null);
+				setPredecesseur((Zone)null);
 				return;
 			case PetrinetPackage.LIENS__SUCCESSEUR:
-				setSuccesseur((zone)null);
+				setSuccesseur((Zone)null);
 				return;
 			case PetrinetPackage.LIENS__IS_READ_ARC:
 				setIs_read_arc(IS_READ_ARC_EDEFAULT);

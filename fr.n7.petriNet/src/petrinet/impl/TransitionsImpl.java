@@ -24,7 +24,7 @@ import petrinet.Transitions;
  *
  * @generated
  */
-public class TransitionsImpl extends zoneImpl implements Transitions {
+public class TransitionsImpl extends ZoneImpl implements Transitions {
 	/**
 	 * The default value of the '{@link #isEst_possible() <em>Est possible</em>}' attribute.
 	 * <!-- begin-user-doc -->

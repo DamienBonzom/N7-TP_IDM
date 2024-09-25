@@ -88,8 +88,8 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 				return createLiensAdapter();
 			}
 			@Override
-			public Adapter casezone(zone object) {
-				return createzoneAdapter();
+			public Adapter caseZone(Zone object) {
+				return createZoneAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -182,16 +182,16 @@ public class PetrinetAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link petrinet.zone <em>zone</em>}'.
+	 * Creates a new adapter for an object of class '{@link petrinet.Zone <em>Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see petrinet.zone
+	 * @see petrinet.Zone
 	 * @generated
 	 */
-	public Adapter createzoneAdapter() {
+	public Adapter createZoneAdapter() {
 		return null;
 	}
 

@@ -19,7 +19,7 @@ package petrinet;
  * @model
  * @generated
  */
-public interface Transitions extends zone {
+public interface Transitions extends Zone {
 	/**
 	 * Returns the value of the '<em><b>Est possible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
