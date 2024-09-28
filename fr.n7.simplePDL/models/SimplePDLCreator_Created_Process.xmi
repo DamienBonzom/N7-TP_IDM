@@ -8,27 +8,28 @@
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       process="/"
-      linksToSuccessors="//@processElements.2 //@processElements.3 //@processElements.4"
-      name="Ma premi&#xc3;&#xa8;re WorkDefinition, quelle &#xc3;&#xa9;motion"/>
+      linksToSuccessors="//@processElements.3"
+      name="A1"/>
   <processElements
       xsi:type="simplepdl:WorkDefinition"
       process="/"
-      linksToPredecessors="//@processElements.2 //@processElements.3 //@processElements.4"
-      name="Ma deuxi&#xc3;&#xa8;me WorkDefinition, toujours autant d'&#xc3;&#xa9;motion"/>
+      linksToPredecessors="//@processElements.3 //@processElements.4"
+      name="A2"/>
+  <processElements
+      xsi:type="simplepdl:WorkDefinition"
+      process="/"
+      linksToSuccessors="//@processElements.4"
+      name="A3"/>
+  <processElements
+      xsi:type="simplepdl:WorkSequence"
+      process="/"
+      linkType="startToFinish"
+      predecessor="//@processElements.0"
+      successor="//@processElements.1"/>
   <processElements
       xsi:type="simplepdl:WorkSequence"
       process="/"
       linkType="finishToFinish"
-      predecessor="//@processElements.0"
-      successor="//@processElements.1"/>
-  <processElements
-      xsi:type="simplepdl:WorkSequence"
-      process="/"
-      predecessor="//@processElements.0"
-      successor="//@processElements.1"/>
-  <processElements
-      xsi:type="simplepdl:WorkSequence"
-      process="/"
-      predecessor="//@processElements.0"
+      predecessor="//@processElements.2"
       successor="//@processElements.1"/>
 </simplepdl:Process>
