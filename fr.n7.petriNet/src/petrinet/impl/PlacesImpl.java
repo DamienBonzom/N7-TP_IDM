@@ -3,9 +3,11 @@
 package petrinet.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import petrinet.PetrinetPackage;
 import petrinet.Places;
 
@@ -32,6 +34,7 @@ public class PlacesImpl extends ZoneImpl implements Places {
 	 * @ordered
 	 */
 	protected static final int NBR_JETONS_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getNbr_jetons() <em>Nbr jetons</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -41,6 +44,7 @@ public class PlacesImpl extends ZoneImpl implements Places {
 	 * @ordered
 	 */
 	protected int nbr_jetons = NBR_JETONS_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,7 +106,6 @@ public class PlacesImpl extends ZoneImpl implements Places {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
